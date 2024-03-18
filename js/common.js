@@ -293,19 +293,19 @@ var langDB = {
   }
 };
 
-function headScroll() {
-  var coords = finish.getBoundingClientRect();
-  if (window.scrollY >= 80 && window.scrollY < coords.top + window.pageYOffset - 80) {
-    header.classList.add('scroll1');
-    header.classList.remove('scroll2');
-  } else if (window.scrollY >= coords.top + window.pageYOffset - 80) {
-    header.classList.add('scroll2');
-    header.classList.remove('scroll1');
-  } else {
-    header.classList.remove('scroll1');
-    header.classList.remove('scroll2');
-  }
-}
+// function headScroll() {
+//   var coords = finish.getBoundingClientRect();
+//   if (window.scrollY >= 80 && window.scrollY < coords.top + window.pageYOffset - 80) {
+//     header.classList.add('scroll1');
+//     header.classList.remove('scroll2');
+//   } else if (window.scrollY >= coords.top + window.pageYOffset - 80) {
+//     header.classList.add('scroll2');
+//     header.classList.remove('scroll1');
+//   } else {
+//     header.classList.remove('scroll1');
+//     header.classList.remove('scroll2');
+//   }
+// }
 
 // function heightShow() {
 //   for (var i = 0; i < show.length; i++) {
@@ -363,13 +363,13 @@ try {
   }
 } catch (e) {}
 
-if (langUser !== 'en' && langDB[langUser]) {
-  toggleLang(langUser);
-  for (var a = 0; a < langItem.length; a++) {
-    langItem[a].classList.remove('active');
-    if (langItem[a].innerText === langUser) langItem[a].classList.add('active');
-  }
-}
+// if (langUser !== 'en' && langDB[langUser]) {
+//   toggleLang(langUser);
+//   for (var a = 0; a < langItem.length; a++) {
+//     langItem[a].classList.remove('active');
+//     if (langItem[a].innerText === langUser) langItem[a].classList.add('active');
+//   }
+// }
 
 // burger.addEventListener('click', function () {
 //   if (header.classList.contains('open')) {
@@ -438,49 +438,49 @@ lang.addEventListener('click', function () {
 //   }, 300);
 // });
 
-for (var i = 0; i < show.length; i++) {
-  show[i].addEventListener('click', function () {
-    var next = this.nextElementSibling;
-    var globalOpen = false;
-    if (this.classList.contains('open')) {
-      this.classList.remove('open');
-      this.parentElement.classList.remove('open');
-      next.setAttribute('style', 'max-height:0');
-    } else {
-      this.classList.add('open');
-      this.parentElement.classList.add('open');
-      next.setAttribute('style', 'max-height:' + next.getAttribute('data-height') + 'px');
-    }
+// for (var i = 0; i < show.length; i++) {
+//   show[i].addEventListener('click', function () {
+//     var next = this.nextElementSibling;
+//     var globalOpen = false;
+//     if (this.classList.contains('open')) {
+//       this.classList.remove('open');
+//       this.parentElement.classList.remove('open');
+//       next.setAttribute('style', 'max-height:0');
+//     } else {
+//       this.classList.add('open');
+//       this.parentElement.classList.add('open');
+//       next.setAttribute('style', 'max-height:' + next.getAttribute('data-height') + 'px');
+//     }
 
-    for (var q = 0; q < show.length; q++) {
-      if (show[q].classList.contains('open')) {
-        globalOpen = true;
-        break;
-      }
-    }
+//     for (var q = 0; q < show.length; q++) {
+//       if (show[q].classList.contains('open')) {
+//         globalOpen = true;
+//         break;
+//       }
+//     }
 
-    if (globalOpen) {
-      showAll.classList.add('open');
-    } else {
-      showAll.classList.remove('open');
-    }
+//     if (globalOpen) {
+//       showAll.classList.add('open');
+//     } else {
+//       showAll.classList.remove('open');
+//     }
 
-    setTimeout(function () {
-      animation();
-    }, 300);
-  });
-}
+//     setTimeout(function () {
+//       animation();
+//     }, 300);
+//   });
+// }
 
-headScroll();
+// headScroll();
 
-animation(true);
+// animation(true);
 
-galleryInit();
+// galleryInit();
 
-window.addEventListener('scroll', function () {
-  headScroll();
-  animation();
-});
+// window.addEventListener('scroll', function () {
+//   headScroll();
+//   animation();
+// });
 
 window.addEventListener("resize", function () {
   if (device === 0 && window.innerWidth > 990) {

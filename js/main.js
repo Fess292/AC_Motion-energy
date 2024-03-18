@@ -1,9 +1,9 @@
 
-$(".toform").click(function () { // ID откуда кливаем
-	$('html, body').animate({
-		scrollTop: $("#form").offset().top  // класс объекта к которому приезжаем
-	}, 700); // Скорость прокрутки
-});
+// $(".toform").click(function () { // ID откуда кливаем
+// 	$('html, body').animate({
+// 		scrollTop: $("#form").offset().top  // класс объекта к которому приезжаем
+// 	}, 700); // Скорость прокрутки
+// });
 
 //------------------------------------------
 // HEADER MENU
@@ -41,8 +41,9 @@ $(window).on('resize', function() {
 // SCROLL MENU
 //------------------------------------------
 function onScroll() {
-	$(headerMenu + ' a').each(function () {
-		var anchor = $(this).attr('href');
+	$(headerMenu + ' a').not('.notlink').each(function () {
+	  var anchor = $(this).attr('href');
+	  if ($(anchor).length) { // проверка на существование элемента
 		var scrollTop = $(document).scrollTop();
 		var positionTop = $(anchor).position().top;
 		var outerHeight = $(anchor).outerHeight();
@@ -54,7 +55,7 @@ function onScroll() {
 		} else {
 			$(this).removeClass('active');
 		}
-
+	}
 	});
 }
 
@@ -62,21 +63,33 @@ function onScroll() {
 $(document).on('scroll', onScroll);
 
 $(headerMenu + ' a').on('click', function (e) {
+	if ($(this).hasClass('notlink')) {
+	  // Если у ссылки есть класс 'notlink', пропускаем её обработку
+	  return;
+	}
+  
+	// Если ссылка не имеет класса 'notlink', продолжаем исполнение
 	e.preventDefault();
 	$(document).off('scroll');
+	
 	$(headerMenu + ' a.active').removeClass('active');
 	$(this).addClass('active');
 	$(headerMenu).removeAttr('style');
-	$(headerMenu + '-touch').removeClass('open')
-
+	$(headerMenu + '-touch').removeClass('open');
+	
 	var anchor = $(this).attr('href');
-	$('html, body').stop().animate({
-		scrollTop: $(anchor).offset().top
-	}, 500, function () {
+	var target = $(anchor);
+  
+	if (target.length) {
+	  // Делаем прокрутку, только если целевой элемент существует
+	  $('html, body').stop().animate({
+		scrollTop: target.offset().top
+	  }, 500, function () {
 		window.location.hash = anchor;
 		$(document).on('scroll', onScroll);
-	});
-});
+	  });
+	}
+  });
 
 
 //слайдер

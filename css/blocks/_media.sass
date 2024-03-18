@@ -7,11 +7,71 @@
 @media screen and (min-width: 768px)
     .wrapper
         margin-top: -10px
-    .container
-        width: 744px
+    // .container
+    //     width: 744px
+    .promo
+        &__list
+            display: flex
+            flex-direction: column
+            align-items: center
     .users
         &__slider
             max-width: 570px
+    .use
+        &__item
+            &:nth-child(2)
+                order: 3
+            &:nth-child(3)
+                order: 2
+    .confirm
+        .container
+            &::before
+                content: ''
+                position: absolute
+                top: -600px
+                right:-800px
+                background: url(../img/promo-decor.png) center/contain no-repeat
+                inline-size: 1978px
+                aspect-ratio: 1
+                z-index: -2
+        &__box
+            display: grid
+            grid-template-rows: 246px 1fr
+            grid-template-columns: 1fr 1fr 1fr
+            row-gap: 10px
+            .prod
+                grid-row: 2/3
+                grid-column: 2/3
+                width: 288px
+    .users__item
+        padding: 32px
+    .final
+        .container
+            display: flex
+    .help
+        .container
+            &::before
+                content: ''
+                position: absolute
+                top: -600px
+                right:-800px
+                transform: scaleX(-1)
+                background: url(../img/promo-decor.png) center/contain no-repeat
+                inline-size: 1978px
+                aspect-ratio: 1
+                z-index: -2
+    .order
+        .container
+            &::after
+                content: ''
+                position: absolute
+                top: -600px
+                right: -800px
+                transform: scaleX(-1)
+                background: url(../img/promo-decor.png) center/contain no-repeat
+                inline-size: 1978px
+                aspect-ratio: 1
+                z-index: -2
 
 @media screen and (max-width: 990px)
     .container
@@ -24,6 +84,10 @@
             top: -2px
             li
                 margin: 0 3px
+            ul
+                li
+                    &:nth-child(5)
+                        display: none
             a
                 padding: 0 10px
                 font-size: 13px

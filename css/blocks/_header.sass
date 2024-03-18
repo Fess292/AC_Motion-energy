@@ -25,7 +25,7 @@ $indent-content: 10px
     left: 0
     width: 100%
     z-index: 30
-    background-color: #000
+    // background-color: #000
 .header-menu ul
     list-style: none
     margin: 0
@@ -92,9 +92,12 @@ $indent-content: 10px
 .open.header-menu-touch > span:nth-child(2)
     opacity: 0
 .header
-    padding: 10px 20px 10px 16px
-    // padding: 10px 0px 15px
+    backdrop-filter: blur(2px)
+    padding: 8px 16px    // padding: 10px 0px 15px
     margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
     &__logo
         cursor: pointer
         width: 133px
@@ -120,10 +123,9 @@ $indent-content: 10px
     li
         position: relative
         display: none
+        align-items: center
         font-size: 24px
-        font-weight: 400
         line-height: 1
-        text-transform: uppercase
         padding-right: 13px
         cursor: pointer
         color: #fff
@@ -138,7 +140,8 @@ $indent-content: 10px
         order: 1
         
         &.active
-            display: block
+            display: flex
+            align-items: center
             -webkit-box-ordinal-group: 0
             -webkit-order: -1
             -moz-box-ordinal-group: 0
@@ -149,11 +152,11 @@ $indent-content: 10px
                 position: absolute
                 // width: 32px
                 // height: 32px
-                inline-size: 18px
+                inline-size: 14px
                 aspect-ratio: 1
                 top: 50%
-                right: 0
-                margin-top: -7px
+                right: 8px
+                margin-top: -9px
                 border: 2px solid #fff
                 border-top: none
                 border-right: none
@@ -173,10 +176,20 @@ $indent-content: 10px
     text-align: center
     border-radius: 88px
     padding: 8px
-    margin: 0 15px 0 auto
+    // margin: 0 15px 0 auto
     background: #202020
 .lang-list li:not(.active)
     margin-top: 10px
+    display: none
+.lang-list li
+    display: flex
+    svg, img
+        inline-size: 32px
+        aspect-ratio: 1
+        border-radius: 50%
+        margin: 0
+        margin-right: 8px
+
 .selection .lang-list li.active:before
     -webkit-transform: rotate(-45deg) scale(-1, -1)
     -moz-transform: rotate(-45deg) scale(-1, -1)
@@ -185,8 +198,9 @@ $indent-content: 10px
     transform: rotate(-45deg) scale(-1, -1)
     margin-top: -3px
 .selection .lang-list li
-    display: block
+    display: flex
 .promo
+    margin-top: 25px
     .container
         &::before
             content: ''
@@ -203,7 +217,7 @@ $indent-content: 10px
         width: 583px
         height: 561px
         opacity: 0.4
-        top: -7px
+        top: -23px
         left: -244px
         z-index: -2
     h1
@@ -221,6 +235,8 @@ $indent-content: 10px
             text-align: left
         li
             margin-top: 8px
+            width: 100%
+            max-width: 346px
             display: flex
             align-items: center
             .ico
@@ -235,11 +251,17 @@ $indent-content: 10px
     &__item
         margin-top: 8px
         height: 128px
+        width: 100%
+        max-width: 400px
         figcaption
             font-weight: 700
             text-align: center
     &__footer
         margin-top: 16px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
 .were
     &__grid
@@ -258,16 +280,30 @@ $indent-content: 10px
 .often
     &__box
         margin-top: 16px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
     &__item
+        max-width: 330px
+        width: 100%
         margin-top: 6px
-        min-height: 124px
-        height: 100%
-        max-height: 193px
+        max-height: 440px
+    .item
+        figcaption
+            padding: 16px
+        // min-height: 124px
+        // height: 10vw
+        // max-height: 193px
 
 .symptom
     &__box
         margin-top: 16px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
     &__item
+        max-width: 330px
+        width: 100%
         margin-top: 6px
         text-align: center
         height: 128px
@@ -292,16 +328,21 @@ $indent-content: 10px
             display: block
     &__box
         margin-top: 16px
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
     
     &__item
         background: #202020
         border-radius: 16px
         padding: 16px
         margin-top: 8px
+        max-width: 360px
         &:nth-child(1)
             img
                 width: 180px
         &:nth-child(3)
+
             img
                 width: 124px
     .prod
@@ -309,6 +350,7 @@ $indent-content: 10px
         img
             width: 253px
 .confirm
+
     .title
         span
             display: block
@@ -319,6 +361,8 @@ $indent-content: 10px
         text-align: center
         color: #fff
     &__item
+        margin: 8px auto 0
+        height: 246px
         h3
             text-align: center
             margin-bottom: 8px
@@ -326,6 +370,8 @@ $indent-content: 10px
     .prod
         margin-top: 8px
         grid-template-rows: 283px 65px
+        img
+            width: 288px
 
     .radial-graph
         display: block
@@ -394,7 +440,8 @@ $indent-content: 10px
     .button
         margin-top: 72px
     .swiper-button-next, .swiper-button-prev
-        top: 103.5%
+        top: auto
+        bottom: -45px
         width: 32px
         height: 32px
         background: #202020
@@ -414,6 +461,8 @@ $indent-content: 10px
 //     padding-bottom: 90px
 .order
     &__item
+        width: 100%
+        max-width: 728px
         margin-top: 28px
         // width: 248px
         position: relative
@@ -476,6 +525,17 @@ $indent-content: 10px
         justify-content: space-around
         flex-wrap: wrap
         counter-reset: num
+    .container
+        &::before
+            content: ''
+            position: absolute
+            background: url('../img/order-bg.png') center/contain no-repeat
+            width: 642px
+            height: 601px
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            opacity: 0.3
 .form
     padding: 33px 15px 16px
     margin: 26px auto 16px
