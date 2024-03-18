@@ -1,0 +1,331 @@
+$c-bg: #333333
+$red: #FF2E3D
+$purp: #8000FF
+$bl: #202020
+$gr: #00F863
+$ye: #FFC700
+*, :before, :after
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+.container
+	margin: 0 auto
+	position: relative
+	// padding: 0 6.25vw
+	padding: 0 10px
+	max-width: 100%
+	width: 320px
+
+.wrapper
+	overflow: hidden
+	position: relative
+	margin: 0 auto -20px
+	max-width: 1920px
+	overflow: hidden
+
+body
+	font-family: 'Jost', sans-serif
+	background-color: #000
+	color: #fff
+	font-size: 16px
+	line-height: 1.4
+
+section
+	position: relative
+	&:not(section.promo), &:not(section.header)
+		padding-top: 32px
+		
+	// padding-bottom: 50px
+	// padding-top: 50px
+
+img
+	max-width: 100%
+	margin: 0 auto
+	display: block
+
+a
+	text-decoration: none
+ul
+	list-style: none
+.web
+	display: none
+.title
+	font-size: 24px
+	line-height: 1.4
+	font-weight: 700
+	color: #fff
+	text-align: center
+	span:not([class])
+		color: #ff2e3d
+
+.prod
+	display: grid
+	grid-template-rows: 187px 65px
+	grid-template-columns: auto
+	margin-top: 20px
+	img
+		grid-row: 1/3
+		grid-column: 1/-1
+	.button
+		grid-row: 2/3
+		grid-column: 1/-1
+.cover
+	display: inline-block
+	margin: 0 5px
+	span
+		position: relative
+		display: block
+		&::after
+			content: ''
+			position: absolute
+			background: $red
+			top: 0
+			bottom: 0
+			left: -5px
+			right: -5px
+			border-radius: 100px
+			z-index: -1
+			
+// .item, [class $="__item"]
+.item
+	position: relative
+	border-radius: 16px
+	overflow: hidden
+	&::after
+		content: ''
+		position: absolute
+		background: linear-gradient(180deg, #202020 0%, rgba(32, 32, 32, 0) 100%), rgba(0, 0, 0, 0.2)
+		z-index: 10
+		bottom: 0
+		top: 0
+		right: 0
+		left: 0
+		z-index: 15
+	img
+		position: absolute
+		// bottom: -52px
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 10
+	figcaption
+		padding: 16px 12px 12px
+		position: relative
+		width: 100%
+		z-index: 20
+		top: 0px
+		left: 50%
+		transform: translateX(-50%)
+
+// .list-box
+	// h3
+.list
+	counter-reset: num
+	list-style: none
+	li, .ingredient h4, .order__item h4
+		position: relative
+		padding-left: 43px
+		margin-top: 30px
+		&::before
+			position: absolute
+			content: counter(num)
+			counter-increment: num
+			inline-size: 28px
+			aspect-ratio: 1
+			border-radius: 50%
+			color: #fff
+			left: 0
+			top: -2px
+			background: #E52D2E
+			font-size: 14px
+			font-weight: 800
+			line-height: 1
+			display: flex
+			justify-content: center
+			align-items: center
+		b
+			text-transform: uppercase
+			display: block
+
+[class^="text-"]
+	font-size: 16px
+	line-height: 1.4
+.text-
+	font-weight: 400
+	line-height: 1.6
+// .text-m
+// 	font-weight: 500
+.text-sb
+	font-weight: 600
+	line-height: 1.3
+.text-b
+	font-weight: 700
+	
+.red
+	.container
+		background: #E52D2E
+		border-radius: 20px
+		color: #fff
+
+// #spriteSvg
+// 	position: absolute
+// 	top: -10px
+// 	left: -10px
+// 	width: 0
+// 	height: 0
+// 	opacity: 0
+.mark
+	background-color: #FF2E3D
+	color: #fff
+	padding: 0 5px
+	// padding: 0.2em 0.4em
+	border-radius: 16px
+	box-decoration-break: clone
+	-webkit-box-decoration-break: clone
+	display: inline
+	line-height: 1.7
+	white-space: normal
+	font-weight: 700
+
+.mark + .mark
+	margin-left: 0.4em
+.button
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: space-around
+	padding: 0 5px
+	outline: none
+	margin: 0 auto 0
+	width: 100%
+	max-width: 319px
+	height: 65px
+	border: none
+	line-height: 1
+	position: relative
+	overflow: hidden
+	transition: all 0.6s cubic-bezier(0.02, 0.01, 0.47, 1)
+	border-radius: 88px
+	cursor: pointer
+	font-family: 'Jost', sans-serif
+	background: $ye
+	line-height: 1
+	svg
+		width: 32px
+		height: 32px
+	
+	span
+		font-size: 24px
+		font-weight: 700
+		color: #000
+		font-family: 'Jost', sans-serif
+		z-index: 20
+
+	&::after
+		background: #fff
+		content: ""
+		height: 155px
+		left: -75px
+		opacity: 0.4
+		position: absolute
+		top: -50px
+		transform: rotate(35deg)
+		transition: all 700ms cubic-bezier(0.19, 1, 0.22, 1)
+		width: 50px
+		z-index: -10
+
+	// &::before
+
+	&:hover
+		animation: rotate624 0.7s ease-in-out both
+		span
+			animation: storm1261 0.7s ease-in-out both
+			animation-delay: 0.06s
+		// &::before
+		&::after
+			left: 120%
+			transition: all 700ms cubic-bezier(0.19, 1, 0.22, 1)
+	// &:active
+	// 	transform: translateY(-1px)
+	// 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+	// span
+	// 	font-family: Jost
+	// 	font-size: 18px
+	// 	line-height: 1
+	// 	color: #FFFFFF
+		// position: relative
+		// z-index: 10
+// section
+// 	&:not(.promo--header)
+// 		display: none
+		
+
+@import 'blocks/_header.sass'
+@import 'blocks/_media'
+
+[data-animation="symbol"]
+	line-height: 1
+	span
+		line-height: 1.1
+[data-animation="left"] 
+	transform: translateX(-100%)
+	opacity: 0
+	transition: opacity .35s, transform .35s
+	&.__anim-show
+		transform: translateX(0)
+		opacity: 1
+
+[data-animation="right"] 
+	transform: translateX(100%)
+	opacity: 0
+	transition: opacity .35s, transform .35s
+	&.__anim-show
+		transform: translateX(0)
+		opacity: 1
+
+[data-animation="top"] 
+	transform: translateY(-100%)
+	opacity: 0
+	transition: opacity .35s, transform .35s
+	&.__anim-show
+		transform: translateY(0)
+		opacity: 1
+
+[data-animation="down"] 
+	transform: translateY(100%)
+	opacity: 0
+	transition: opacity .35s, transform .35s
+	&.__anim-show
+		transform: translateY(0)
+		opacity: 1
+
+[data-animation="scale"]
+	transform: scale(0.5)
+	opacity: 0
+	transition: opacity .35s, transform .35s
+
+	&.__anim-show
+		transform: scale(1)
+		opacity: 1
+
+.__anim
+	&__box
+		display: inline-block
+		position: relative
+		overflow: hidden
+		line-height: 1.3
+
+	&__symbol
+		display: inline-block
+		transform: scale(0)
+		transition: transform .25s
+
+	&__text
+		display: inline-block
+		transform: translateY(110%) rotate(0.15deg)
+		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s
+
+.__anim-show .__anim__symbol
+	transform: scale(1)
+.__anim-show .__anim__text
+	transform: translateY(0) rotate(0)
