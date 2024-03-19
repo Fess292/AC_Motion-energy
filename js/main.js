@@ -94,13 +94,7 @@ $(headerMenu + ' a').on('click', function (e) {
 
 //слайдер
 
-var catalogSlider = null;
-var mediaQuerySize = 990;
-// var mediaQuerySizeDesk = 1200;
-
-function catalogSliderInit() {
-	if (!catalogSlider) {
-		catalogSlider = new Swiper('.users__slider', {
+		var catalogSlider = new Swiper('.users__slider', {
 			effect: "coverflow",
 			slidesPerView: 1,
 			grabCursor: true,
@@ -129,29 +123,6 @@ function catalogSliderInit() {
 				prevEl: ".swiper-button-prev",
 			  },
 		});
-	}
-}
-
-function catalogSliderDestroy() {
-	if (catalogSlider) {
-		catalogSlider.destroy();
-		catalogSlider = null;
-	}
-}
-
-$(window).on('load resize', function () {
-	// Берём текущую ширину экрана
-	var windowWidth = $(this).innerWidth();
-
-	// Если ширина экрана меньше или равна mediaQuerySize(1024)
-	if (windowWidth <= mediaQuerySize) {
-		// Инициализировать слайдер если он ещё не был инициализирован
-		catalogSliderInit()
-	} else {
-		// Уничтожить слайдер если он был инициализирован
-		catalogSliderDestroy()
-	}
-});
 
 
 // Radial progress bar

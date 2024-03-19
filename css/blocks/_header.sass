@@ -40,11 +40,11 @@ $indent-content: 10px
     user-select: none
     height: $h-header
     align-items: center
-    font-size: 16px
-    text-transform: uppercase
+    font-size: 24px
     color: #000
-    font-weight: 600
+    font-weight: 400
     position: relative
+    text-align: center
     &::before
         border-radius: 19px
         position: absolute
@@ -57,7 +57,7 @@ $indent-content: 10px
         background: #fff
         transition: opacity .4s
         opacity: 0
-.header-menu a:hover,
+// .header-menu a:hover,
 .header-menu a.active
     position: relative
     color: #fff
@@ -175,7 +175,7 @@ $indent-content: 10px
     width: 123px
     text-align: center
     border-radius: 88px
-    padding: 8px
+    padding: 9px
     // margin: 0 15px 0 auto
     background: #202020
 .lang-list li:not(.active)
@@ -201,6 +201,8 @@ $indent-content: 10px
     display: flex
 .promo
     margin-top: 25px
+    .form
+        display: none
     .container
         &::before
             content: ''
@@ -226,6 +228,8 @@ $indent-content: 10px
         font-size: 40px
         text-align: center
     .prod
+        .web
+            display: none
         img
             width: 187px
     &__list
@@ -432,8 +436,6 @@ $indent-content: 10px
         margin-top: -7px
         p
             margin-top: 15px
-            font-weight: 400
-            font-size: 16px
             color: #fff
     h4
         margin-top: 16px

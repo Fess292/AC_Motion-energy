@@ -54,7 +54,7 @@
 							Terms of service
 						</a>
 					</li>
-					<li>
+					<li class="web">
 						<a href="privacy.html" class="header__red notlink" data-lang-text="59">
 							Privacy policy
 						</a>
@@ -114,6 +114,38 @@
 					<br>
 					<span class="mark">при болях в суставах</span>
 				</h2>
+				<form class="form" id="form" action="" method="post">
+					<div class="price">
+						<div class="price__old">
+							<p>
+								{{ old_price }}<span>{{ currency }}</span>
+							</p>
+						</div>
+						<div class="price__new">
+							<p>
+								{{ price }}<span>{{ currency }}</span>
+							</p>
+						</div>
+					</div>
+					<input name="cc_comment" type="hidden"
+						value="Contenido: Historia de Sophia Kalos, experta en salud femenina, de que las dietas y el ejercicio no son necesarios para perder peso de forma eficaz.<br>Marcadores clave:<br>1. Ahora hay un 50% de descuento en el producto. La cantidad de producto disponible en la promoción es limitada. El producto se agota rápidamente.<br>2. Cápsulas adelgazantes que combaten la causa del sobrepeso, el hongo Candida y ayudan a deshacerse de 10 kg. en un mes.<br>3. Un remedio seguro a base de componentes completamente orgánicos que no tienen contraindicaciones y no causan complicaciones.<br>4. Fórmula única que no tiene análogos en el espectro de acción y eficacia.<br>Una gran cantidad de falsificaciones, por lo que el producto no se puede comprar en las farmacias, pero sólo en la forma a continuación desde el distribuidor oficial.">
+					<select id="country_code_selector">
+						<option value="UK"> United Kingdom </option>
+					</select>
+					<input name="name" required placeholder="Имя" type="text">
+					<input name="phone" class="only_number" type="tel" required placeholder="Телефон">
+					<div class="button">
+						<svg class="button__left">
+							<use xlink:href="#btn-ico-left"></use>
+						</svg>
+						<span>
+							Заказать
+						</span>
+						<svg class="button__right">
+							<use xlink:href="#arrows"></use>
+						</svg>
+					</div>
+				</form>
 				<div class="prod">
 					<img class="web" src="img/prod.png">
 					<img src="img/prod-2.png">
@@ -202,8 +234,7 @@
 							<b>
 								<span class="mark">У 78%</span> населения в возрасте <span class="mark">от 30</span>
 								<span class="mark">до 45</span> лет
-								<span class="mark">были
-									проблемы с суставами</span> той или иной степени* 
+								были <span class="mark">проблемы с суставами</span> той или иной степени* 
 							</b>
 						</p>
 						<br>
@@ -222,7 +253,7 @@
 					<span>Самые частые</span> причины проблем с суставами у молодых людей это:
 				</h2>
 				<div class="often__box">
-					<figure class="often__item item">
+					<figure class="often__item often__item--1 item">
 						<figcaption>
 							<span class="mark">Спортивные травмы</span>, такие как искривления,
 							вывихи, удары и другие повреждения, часто возникающие при занятии спортом, могут
@@ -230,7 +261,7 @@
 						</figcaption>
 						<img src="img/often-1.jpg">
 					</figure>
-					<figure class="often__item item">
+					<figure class="often__item often__item--2 item">
 						<figcaption>
 							<span class="mark">Перенапряжение и повреждения хряща</span> могут
 							возникнуть даже при повседневных действиях, таких как поднятие тяжелых сумок с покупками
@@ -238,14 +269,14 @@
 						</figcaption>
 						<img src="img/often-2.jpg">
 					</figure>
-					<figure class="often__item item">
+					<figure class="often__item often__item--3 item">
 						<figcaption>
 							<span class="mark">Падения и ушибы</span> - это повседневные травмы,
 							которые  вызывают боль и воспаление и приводят к серьезным осложнениям.
 						</figcaption>
 						<img src="img/often-3.jpg">
 					</figure>
-					<figure class="often__item item">
+					<figure class="often__item often__item--4 item">
 						<figcaption>
 							<span class="mark">Работа и повседневная активность</span>, многократные
 							повторяющиеся движения, длительное стояние или сидение, могут вызвать стресс для
@@ -253,7 +284,7 @@
 						</figcaption>
 						<img src="img/often-4.jpg">
 					</figure>
-					<figure class="often__item item">
+					<figure class="often__item often__item--5 item">
 						<figcaption>
 							<span class="mark">Избыточный вес</span> увеличивает нагрузку на суставы,
 							особенно на коленях, бедрах и спине, что может привести к болям.
@@ -505,7 +536,7 @@
 				<div class="users__slider swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<figure class="text- users__item">
+							<figure class="users__item">
 								<img src="img/reviews-1.jpg">
 								<figcaption>
 									<div class="users__descr">
@@ -533,7 +564,7 @@
 							</figure>
 						</div>
 						<div class="swiper-slide">
-							<figure class="text- users__item">
+							<figure class="users__item">
 								<img src="img/reviews-2.jpg">
 								<figcaption>
 									<div class="users__descr">
@@ -557,7 +588,7 @@
 							</figure>
 						</div>
 						<div class="swiper-slide">
-							<figure class="text- users__item">
+							<figure class="users__item">
 								<img src="img/reviews-3.jpg">
 								<figcaption>
 									<div class="users__descr">
@@ -586,7 +617,7 @@
 							</figure>
 						</div>
 						<div class="swiper-slide">
-							<figure class="text- users__item">
+							<figure class="users__item">
 								<img src="img/reviews-4.jpg">
 								<figcaption>
 									<div class="users__descr">
