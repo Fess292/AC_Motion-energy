@@ -359,17 +359,35 @@
         .prod
             grid-row: 2/3
             grid-column: 2/3
-            width: 32.59%
+            width: 18.958vw
         &__man
             display: block
             grid-row: 2/3
             grid-column: 1/2
-            width: 67.41%
+            width: 45.625vw
         &__inner
             display: grid
             grid-template-columns: repeat(2, auto)
             grid-template-rows: repeat(2, auto)
 
 @media screen and (min-width: 1200px)
-    
+    .mark
+        border-radius: 100px
+    body
+        font-size: 24px
+    .title
+        font-size: 48px
+    .promo
+        h1
+            display: none
+        .title
+            font-size: 32px
+            text-align: left
+        &__list
+            li
+                margin-top: 15px
+                .ico
+                    width: 110px
+                p
+                    font-size: 32px
 

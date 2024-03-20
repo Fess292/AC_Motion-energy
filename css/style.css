@@ -531,6 +531,7 @@ ul {
   background: url(../img/promo-decor.png) center/contain no-repeat;
   inline-size: 481px;
   aspect-ratio: 1;
+  z-index: -3;
 }
 .promo__girl {
   position: absolute;
@@ -1555,18 +1556,45 @@ ul {
   .final .prod {
     grid-row: 2/3;
     grid-column: 2/3;
-    width: 32.59%;
+    width: 18.958vw;
   }
   .final__man {
     display: block;
     grid-row: 2/3;
     grid-column: 1/2;
-    width: 67.41%;
+    width: 45.625vw;
   }
   .final__inner {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mark {
+    border-radius: 100px;
+  }
+  body {
+    font-size: 24px;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .promo h1 {
+    display: none;
+  }
+  .promo .title {
+    font-size: 32px;
+    text-align: left;
+  }
+  .promo__list li {
+    margin-top: 15px;
+  }
+  .promo__list li .ico {
+    width: 110px;
+  }
+  .promo__list li p {
+    font-size: 32px;
   }
 }
 [data-animation=symbol] {
