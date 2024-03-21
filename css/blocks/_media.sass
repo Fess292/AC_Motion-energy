@@ -55,6 +55,7 @@
     .final
         .container
             display: flex
+            align-items: center
     .help
         .container
             &::before
@@ -141,6 +142,8 @@
 @media screen and (min-width: 991px)
     body
         font-size: 17px
+    .wrapper
+        margin-bottom: -20px
     .title
         font-size: 32px
     section:not(section.promo), section:not(section.header)
@@ -233,11 +236,12 @@
         &__box
             display: grid
             grid-template-columns: 1fr 0.5fr 0.5fr 1fr
-            grid-template-rows: repeat(2, 240px)
+            grid-template-rows: repeat(2, min(22.917vw, 420px))
             gap: 32px
         &__item
             width: 100%
             max-width: none
+            margin-top: 0
             &--1
                 grid-row: 1/2
                 grid-column: 1/2
@@ -371,8 +375,14 @@
             grid-template-rows: repeat(2, auto)
 
 @media screen and (min-width: 1200px)
+    .container
+        padding: 0 5.938vw
+    .header
+        padding: 24px 5.938vw 0
     .mark
         border-radius: 100px
+    .wrapper
+        margin-top: -34px
     body
         font-size: 24px
     .title
@@ -383,6 +393,14 @@
         .title
             font-size: 32px
             text-align: left
+        .prod
+            .web
+                width: 21.61vw
+                max-width: 415px
+        &__girl
+            width: 69.90vw
+            max-width: 1342px
+            height: auto
         &__list
             li
                 margin-top: 15px
@@ -390,4 +408,26 @@
                     width: 110px
                 p
                     font-size: 32px
+    .form
+        width: 29.844vw
+        max-width: 573px
+        padding-bottom: 64px
+        input, select
+            width: 23.177vw
+            max-width: 445px
+    .often
+        &__item
+            font-size: 18px
+            &--1, &--2, &--3
+                aspect-ratio: 331/268
+            &--5, &--4
+                aspect-ratio: 533/282
+    .final
+        &__header
+            h3
+                font-size: 26px
+        .toptitle
+            font-size: 77px
+        .title
+            font-size: 26px
 

@@ -1160,6 +1160,9 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .help .container::before {
     content: "";
@@ -1259,6 +1262,9 @@ ul {
 @media screen and (min-width: 991px) {
   body {
     font-size: 17px;
+  }
+  .wrapper {
+    margin-bottom: -20px;
   }
   .title {
     font-size: 32px;
@@ -1379,12 +1385,13 @@ ul {
   .often__box {
     display: grid;
     grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: repeat(2, 240px);
+    grid-template-rows: repeat(2, min(22.917vw, 420px));
     gap: 32px;
   }
   .often__item {
     width: 100%;
     max-width: none;
+    margin-top: 0;
   }
   .often__item--1 {
     grid-row: 1/2;
@@ -1571,8 +1578,17 @@ ul {
   }
 }
 @media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 5.938vw;
+  }
+  .header {
+    padding: 24px 5.938vw 0;
+  }
   .mark {
     border-radius: 100px;
+  }
+  .wrapper {
+    margin-top: -34px;
   }
   body {
     font-size: 24px;
@@ -1587,6 +1603,15 @@ ul {
     font-size: 32px;
     text-align: left;
   }
+  .promo .prod .web {
+    width: 21.61vw;
+    max-width: 415px;
+  }
+  .promo__girl {
+    width: 69.9vw;
+    max-width: 1342px;
+    height: auto;
+  }
   .promo__list li {
     margin-top: 15px;
   }
@@ -1595,6 +1620,33 @@ ul {
   }
   .promo__list li p {
     font-size: 32px;
+  }
+  .form {
+    width: 29.844vw;
+    max-width: 573px;
+    padding-bottom: 64px;
+  }
+  .form input, .form select {
+    width: 23.177vw;
+    max-width: 445px;
+  }
+  .often__item {
+    font-size: 18px;
+  }
+  .often__item--1, .often__item--2, .often__item--3 {
+    aspect-ratio: 331/268;
+  }
+  .often__item--5, .often__item--4 {
+    aspect-ratio: 533/282;
+  }
+  .final__header h3 {
+    font-size: 26px;
+  }
+  .final .toptitle {
+    font-size: 77px;
+  }
+  .final .title {
+    font-size: 26px;
   }
 }
 [data-animation=symbol] {
