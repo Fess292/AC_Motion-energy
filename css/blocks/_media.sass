@@ -36,7 +36,7 @@
                 z-index: -2
         &__box
             display: grid
-            grid-template-rows: 246px 1fr
+            grid-template-rows: 255px 255px
             grid-template-columns: 1fr 1fr 1fr
             gap: 10px
             .prod
@@ -143,7 +143,7 @@
     body
         font-size: 17px
     .wrapper
-        margin-bottom: -20px
+        margin-bottom: -25px
     .title
         font-size: 32px
     section:not(section.promo), section:not(section.header)
@@ -346,6 +346,24 @@
                 grid-column: 3/7
                 grid-row: 3/4
     .final
+        &__footer
+            position: absolute
+            bottom: 0
+            width: 100vw
+            display: flex
+            height: 97px
+            justify-content: start
+            align-items: center
+            background: #000
+            opacity: 0.8
+            li
+                margin-right: 124px
+                a
+                    font-weight: 400
+                    font-size: 24px
+                    text-decoration: underline
+                    text-decoration-skip-ink: none
+                    color: #ff2e3d
         .container
             &::before
                 content: ''
@@ -373,16 +391,20 @@
             display: grid
             grid-template-columns: repeat(2, auto)
             grid-template-rows: repeat(2, auto)
+        .form
+            margin-bottom: 49px
 
 @media screen and (min-width: 1200px)
     .container
         padding: 0 5.938vw
+    .wrapper
+        margin-top: -34px
     .header
         padding: 24px 5.938vw 0
     .mark
         border-radius: 100px
     .wrapper
-        margin-top: -34px
+        margin-bottom: -34px
     body
         font-size: 24px
     .title
@@ -422,6 +444,9 @@
                 aspect-ratio: 331/268
             &--5, &--4
                 aspect-ratio: 533/282
+    .confirm
+        &__box
+            grid-template-rows: 280px 280px
     .final
         &__header
             h3
@@ -430,4 +455,32 @@
             font-size: 77px
         .title
             font-size: 26px
+        .container
+            &::before
+                bottom: -1190px
+                right: -700px
+
+@media screen and (min-width: 1700px)
+    .container
+        padding: 0
+        width: 1696px
+    body
+        font-size: 32px
+    .lang
+        height: 65px
+        width: 139px
+        padding: 17px
+    .header
+        padding-left: 0
+        padding-right: 0
+        &-menu
+            a
+                height: 65px
+                font-size: 24px
+    .promo
+        margin-top: 106px
+        &__list
+            justify-content: flex-start
+    .mark
+        align-items: 5px 5px
 
