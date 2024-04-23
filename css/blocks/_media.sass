@@ -272,7 +272,7 @@
             max-width: 1218px
         &__grid
             display: grid
-            grid-template-columns: 47.29% 52,71%
+            grid-template-columns: 47.29% 52.71%
             grid-template-rows: auto
             align-items: center
         &__bone
@@ -346,6 +346,7 @@
                 grid-column: 3/7
                 grid-row: 3/4
     .final
+        margin-bottom: -4px
         &__footer
             position: absolute
             bottom: 0
@@ -461,9 +462,13 @@
                 right: -700px
 
 @media screen and (min-width: 1700px)
+    section:not(section.promo), section:not(section.header)
+        padding-top: 128px
     .container
         padding: 0
         width: 1696px
+    .wrapper
+        margin-bottom: -45px
     body
         font-size: 32px
     .lang
@@ -473,14 +478,217 @@
     .header
         padding-left: 0
         padding-right: 0
+        width: 1696px
+        left: 50%
+        transform: translateX(-50%)
         &-menu
             a
                 height: 65px
                 font-size: 24px
     .promo
         margin-top: 106px
+        .mark
+            padding: 5px 5px
+        .container
+            align-items: start
+            &::before
+                    right: -110px
+                    inline-size: 1920px
+                    top: -150px
         &__list
-            justify-content: flex-start
-    .mark
-        align-items: 5px 5px
+            align-items: flex-start
+        &__girl
+            opacity: 1
+            top: -200px
+            left: 425px
+        .prod
+            margin-top: 110px
+            .web
+                margin: 0
+                margin-left: auto
+        &__footer
+            margin-top: 86px
+        &__item
+            height: 320px
+    .item
+        border-radius: 44px
+        figcaption
+            font-size: 24px
+            padding: 32px
+    .button
+        width: 445px
+        max-width: none
+    .form
+        padding: 64px 40px 64px
+        justify-self: end
+        margin: 26px 0 
+        .price__old p
+            font-size: 24px
+        .price__new p
+            font-size: 64px
+            margin-bottom: 32px
+        input, select
+            margin-bottom: 32px
+        .button
+            padding-left: 32px
+            padding-right: 32px
+            justify-content: space-between
+    // .mark
+    //     padding: 5px 5px
+    .were
+        margin-top: -128px
+    .often
+        margin-top: -150px
+        .title
+            width: 1030px
+            margin: 0 auto
+        .item
+            figcaption
+                padding: 32px
+        &__box
+            margin-top: 48px
+            grid-template-rows: repeat(2, 440px)
+            grid-template-columns: 544px 256px 256px 542px
+        &__item--1, &__item--2, &__item--3
+            aspect-ratio: auto
+    .symptom
+        .title
+            width: 800px
+            margin: 0 auto
+        &__box
+            grid-template-columns: repeat(3, 544px)
+            margin-top: 48px
+        &__item
+            height: 320px
+    .help
+        .container
+            &::before
+                top: -630px
+                right: -390px
+        .title
+            width: 980px
+            margin: 0 auto
+        &__grid
+            margin-top: 64px
+        &__bone
+            width: 556px
+            justify-self: end
+        &__info p
+            margin-top: 32px
+    .use
+        &__box
+            grid-template-columns: 544px 544px 544px
+            margin-top: 48px
+        &__item
+            max-width: none
+            padding: 32px
+            font-size: 24px
+            &:nth-child(1)
+                img
+                    width: 332px
+                    margin-top: 57px
+            &:nth-child(3)
+                img
+                    width: 270px
+        .prod
+            margin-top: -300px
+            grid-template-rows: 353px 65px
+            img
+                width: 370px
+            
+    .confirm
+        .container
+            &::before
+                top: -530px
+                right: -150px
+        .title
+            width: 1060px
+            margin: 0 auto
+            span
+                display: inline-block
+        &__subtitle
+            margin: 48px 0 32px
+        &__box
+            grid-template-columns: 544px 544px 544px
+            gap: 32px
+            grid-template-rows: 360px 360px
+        &__item
+            padding: 32px 100px 0
+            h3
+                margin-bottom: 12px
+        .prod
+            margin-top: 80px
+            img
+                width: 370px
+    .users
+        &__slider
+            margin-top: 48px
+        &__descr, h4
+            font-size: 24px
+        &__item
+            border-radius: 44px
+        .swiper-button-next
+            right: 450px
+            bottom: -61px
+        .swiper-button-prev
+            left: 450px
+            bottom: -61px
+        .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+            bottom: -60px
+        .button
+            margin-top: 96px
+
+
+    .swiper-pagination-bullet
+        width: 88px
+
+    .order
+        .title
+            text-align: left
+        .container
+            &::before
+                opacity: 1
+                width: 886px
+                height: 829px
+                left: auto
+                transform: none
+                right: -151px
+                top: -110px
+            &::after
+                top: -890px
+                right: -140px
+        &__inner
+            margin-top: 74px
+            width: 1017px
+            grid-template-columns: 144px 144px 144px repeat(3, auto)
+        &__item
+            margin-top: 16px
+
+    .final
+        margin-bottom: -120px
+        // height: 1079px
+        .container
+            align-items: flex-start
+            &::before
+                bottom: -930px
+                right: -160px
+        .mark
+            font-size: 32px
+            padding: 5px
+        .title
+            font-size: 32px
+        .toptitle
+            font-size: 96px
+        .form
+            max-width: none
+            width: 573px
+        &__inner
+            width: calc( 100% - 573px )
+            margin-right: 11px
+        &__man
+            margin-left: -140px
+        .prod
+            margin-top: -45px
+        &__footer
+            bottom: 118px
 

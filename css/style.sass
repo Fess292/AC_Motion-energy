@@ -209,6 +209,7 @@ ul
 	font-family: 'Jost', sans-serif
 	background: $ye
 	line-height: 1
+	z-index: 100
 	svg
 		width: 32px
 		height: 32px
@@ -266,13 +267,13 @@ ul
 	line-height: 1
 	span
 		line-height: 1.1
-[data-animation="left"] 
-	transform: translateX(-100%)
-	opacity: 0
-	transition: opacity .35s, transform .35s
-	&.__anim-show
-		transform: translateX(0)
-		opacity: 1
+// [data-animation="left"] 
+// 	transform: translateX(-100%)
+// 	opacity: 0
+// 	transition: opacity .35s, transform .35s
+// 	&.__anim-show
+// 		transform: translateX(0)
+// 		opacity: 1
 
 [data-animation="right"] 
 	transform: translateX(100%)
@@ -298,33 +299,33 @@ ul
 		transform: translateY(0)
 		opacity: 1
 
-[data-animation="scale"]
-	transform: scale(0.5)
-	opacity: 0
-	transition: opacity .35s, transform .35s
+// [data-animation="scale"]
+// 	transform: scale(0.5)
+// 	opacity: 0
+// 	transition: opacity .35s, transform .35s
 
-	&.__anim-show
-		transform: scale(1)
-		opacity: 1
+// 	&.__anim-show
+// 		transform: scale(1)
+// 		opacity: 1
 
-.__anim
-	&__box
-		display: inline-block
-		position: relative
-		overflow: hidden
-		line-height: 1.3
+// .__anim
+// 	&__box
+// 		display: inline-block
+// 		position: relative
+// 		overflow: hidden
+// 		line-height: 1.3
 
-	&__symbol
-		display: inline-block
-		transform: scale(0)
-		transition: transform .25s
+// 	&__symbol
+// 		display: inline-block
+// 		transform: scale(0)
+// 		transition: transform .25s
 
-	&__text
-		display: inline-block
-		transform: translateY(110%) rotate(0.15deg)
-		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s
+// 	&__text
+// 		display: inline-block
+// 		transform: translateY(110%) rotate(0.15deg)
+// 		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s
 
-.__anim-show .__anim__symbol
-	transform: scale(1)
-.__anim-show .__anim__text
-	transform: translateY(0) rotate(0)
+// .__anim-show .__anim__symbol
+// 	transform: scale(1)
+// .__anim-show .__anim__text
+// 	transform: translateY(0) rotate(0)
